@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.final_backtest import run_backtest
+from final_backtest import run_backtest
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 

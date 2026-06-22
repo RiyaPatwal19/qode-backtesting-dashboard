@@ -224,7 +224,7 @@ function App() {
           maxWidth: "850px",
           margin: "30px auto",
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: "repeat(5, 1fr)",
           gap: "20px",
         }}
       >
@@ -284,8 +284,25 @@ function App() {
 
   <h2 style={{ color: "#111827" }}>
     {result
-      ? "₹" + result.final_value.toLocaleString()
-      : "--"}
+  ? "₹" + Number(result.final_value).toLocaleString("en-IN")
+  : "--"}
+  </h2>
+</div>
+
+<div
+  style={{
+    background: "white",
+    padding: "20px",
+    borderRadius: "12px",
+    boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
+  }}
+>
+  <h4 style={{ color: "#6b7280" }}>
+    Stocks Selected
+  </h4>
+
+  <h2 style={{ color: "#111827" }}>
+    {result ? result.portfolio_size : "--"}
   </h2>
 </div>
       </div>
